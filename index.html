@@ -25,20 +25,28 @@
             <input id="firstInput" class="input-default" type="number">
             <p class="prg-default">Segundo número:</p>
             <input id="secondInput" class="input-default" type="number">
-            <p class="prg-default">Resultado:</p>
-            <output id="resultOutput" class="output-default" type="number">
-            <div class="clear"></div>
         </section>
 
         <!-- Buttons <section> -->
         <section class="second-section">
-            <button onclick="limpar()" class="btn-default">Limpar os campos</button>
-            <button onclick="somar()" class="btn-default">Somar</button>
-            <button onclick="subtrair()" class="btn-default">Subtrair</button>
-            <button onclick="multiplicar()" class="btn-default">Multiplicar</button>
-            <button onclick="dividir()" class="btn-default">Dividir</button>
-            <div class="clear"></div>
+            <div class="left-div">
+                <button onclick="limpar()" class="btn-clean">Limpar os campos</button>
+                <div class="espacamento">
+                    <button onclick="somar()" class="btn-default">Somar</button>
+                    <button onclick="subtrair()" class="btn-default">Subtrair</button>
+                </div>
+                <div class="espacamento">
+                    <button onclick="multiplicar()" class="btn-default">Multiplicar</button>
+                    <button onclick="dividir()" class="btn-default">Dividir</button>
+                </div>
+            </div>
+
+            <div class="right-div">
+                <p class="prg-default">Resultado:</p>
+                <output id="resultOutput" class="output-default" type="number">
+            </div>
         </section>
+
 
     </main>
 
