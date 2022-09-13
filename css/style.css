@@ -1,11 +1,13 @@
+/*
+    Author: Anderson Henrique de Queiroz
+    Year: 2022
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Righteous&display=swap');
 /* FONTS GOOGLE APIs
 font-family: 'Righteous', cursive;      *400 (regular) *700 (bold)
 font-family: 'Exo 2', sans-serif;       *400 (regular) *700 (bold)
 */
-
-/* DEFAULT BACKGROUND COLOR FOR HEADER, MAIN AND FOOTER:
-    rgba(240, 235, 227, 0.25) or #F0EBE33F (#rrggbbaa) aa = 3F = 25% opacity */
 
 * { /* RESET DEFAULTS */
     margin: 0;
@@ -14,9 +16,10 @@ font-family: 'Exo 2', sans-serif;       *400 (regular) *700 (bold)
     text-decoration: none;
 }
 
-/*SE CASO O USUÁRIO ESTIVER USANDO UM SISTEMA MOBILE*/
+/* SETTINGS FOR MOBILE ############### */
 @media (pointer: coarse) {
     body {
+        margin-top: 75px !important;
         background: #00CDAC !important;
     }
     .header-default {
@@ -42,9 +45,10 @@ font-family: 'Exo 2', sans-serif;       *400 (regular) *700 (bold)
         float: none !important;
     }
 }
+/* ################################### */
 
 body {
-    margin-top: 115px;
+    margin-top: 155px;
     font-size: 100%; /*DEFAULT: 100%*/
     background: linear-gradient(to right,#02AAB0,#00CDAC);
 }
@@ -110,6 +114,19 @@ body {
 }
 
 .input-default {
+    text-align: center;
+    font-size: 26px;
+    color: #02AAB0;
+    margin-bottom: 5px;
+    width: 250px;
+    height: 30px;
+}
+
+.output-default {
+    background-color: #F1F1F1;
+    text-align: center;
+    font-size: 26px;
+    color: #02AAB0;
     margin-bottom: 5px; 
     width: 250px;
     height: 30px;

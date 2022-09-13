@@ -1,3 +1,8 @@
+<!--
+    Author: Anderson Henrique de Queiroz
+    Year: 2022
+-->
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -14,26 +19,24 @@
     </header>
 
     <main class="main-default">
+        <!-- Inputs and Output <section> -->
         <section class="first-section">
             <p class="prg-default">Primeiro número:</p>
             <input id="firstInput" class="input-default" type="number">
-
             <p class="prg-default">Segundo número:</p>
             <input id="secondInput" class="input-default" type="number">
-
             <p class="prg-default">Resultado:</p>
-            <input id="thirdInput" class="input-default" type="number">
+            <output id="resultOutput" class="output-default" type="number">
             <div class="clear"></div>
         </section>
 
+        <!-- Buttons <section> -->
         <section class="second-section">
-            <button id="limpar-button" class="btn-default">Limpar os campos</button>
-
-            <button id="somar-button" class="btn-default">Somar</button>
-            <button id="subtrair-button" class="btn-default">Subtrair</button>
-
-            <button id="multiplicar-button" class="btn-default">Multiplicar</button>
-            <button id="dividir-button" class="btn-default">Dividir</button>
+            <button onclick="limpar()" class="btn-default">Limpar os campos</button>
+            <button onclick="somar()" class="btn-default">Somar</button>
+            <button onclick="subtrair()" class="btn-default">Subtrair</button>
+            <button onclick="multiplicar()" class="btn-default">Multiplicar</button>
+            <button onclick="dividir()" class="btn-default">Dividir</button>
             <div class="clear"></div>
         </section>
 
@@ -44,5 +47,7 @@
         <p class="prg-made">Site made with Figma (prototype), HTML, CSS and JS</p>
     </footer>
 
+    <!--  Tag to call .js -->
+    <script type="text/javascript" src="js/calculo.js"></script>
 </body>
 </html>
