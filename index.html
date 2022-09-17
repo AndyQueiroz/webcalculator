@@ -9,50 +9,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>WebCalculator - V 0.1 (beta)</title>
 </head>
 
 <body>
-    <header class="header-default">
-        <h1 class="title">WebCalculator</h1>
-        <h2 class="prg-default version-center">Versão 0.1 (beta)</h2>
+    <header class="header-dft win-background">
+        <h1 class="title-dft">WebCalculator</h1>
+        <h2 class="prg-dft version-center">Versão 0.1 (beta)</h2>
     </header>
 
-    <main class="main-default">
-        <!-- Inputs and Output <section> -->
-        <section class="first-section">
-            <p class="prg-default">Primeiro número:</p>
-            <input id="firstInput" class="input-default" type="number">
-            <p class="prg-default">Segundo número:</p>
-            <input id="secondInput" class="input-default" type="number">
+    <main class="main-dft win-background">
+        <!-- Inputs <section> -->
+        <section class="upper-sct ">
+            <p class="prg-dft">Primeiro número:</p>
+            <input id="firstInput" class="input-dft box select" type="number">
+            <p class="prg-dft">Segundo número:</p>
+            <input id="secondInput" class="input-dft box select" type="number">
         </section>
 
-        <!-- Buttons <section> -->
-        <section class="second-section">
+        <!-- Buttons and Output <section> -->
+        <section class="lower-sct">
             <div class="left-div">
-                <button onclick="limpar()" class="btn-clean">Limpar os campos</button>
-                <div class="espacamento">
-                    <button onclick="somar()" class="btn-default">Somar</button>
-                    <button onclick="subtrair()" class="btn-default">Subtrair</button>
+                <button onclick="limpar()" class="btn-clean btn-color select">
+                    <p class="prg-made">Limpar os campos</p>
+                </button>
+                <div class="spacing">
+                    <button onclick="somar()" class="btn-dft btn-color select">
+                        <p class="btn-somar prg-btn"><!-- O TEXTO AQUI É INSERIDO PELO CSS --></p>
+                    </button>
+                    <button onclick="subtrair()" class="btn-dft btn-color select">
+                        <p class="btn-subtrair prg-btn"><!-- O TEXTO AQUI É INSERIDO PELO CSS --></p>
+                    </button>
                 </div>
-                <div class="espacamento">
-                    <button onclick="multiplicar()" class="btn-default">Multiplicar</button>
-                    <button onclick="dividir()" class="btn-default">Dividir</button>
+                <div class="spacing">
+                    <button onclick="multiplicar()" class="btn-dft btn-color select">
+                        <p class="btn-multiplicar prg-btn"><!-- O TEXTO AQUI É INSERIDO PELO CSS --></p>
+                    </button>
+                    <button onclick="dividir()" class="btn-dft btn-color select">
+                        <p class="btn-dividir prg-btn"><!-- O TEXTO AQUI É INSERIDO PELO CSS --></p>
+                    </button>
                 </div>
             </div>
 
             <div class="right-div">
-                <p class="prg-default">Resultado:</p>
-                <output id="resultOutput" class="output-default" type="number">
+                <p class="prg-dft">Resultado:</p>
+                <output id="resultOutput" class="output-dft box select" type="number">
             </div>
         </section>
 
 
     </main>
 
-    <footer class="footer-default">
-        <p class="prg-default">Anderson Queiroz - 2022</p>
-        <p class="prg-made">Site made with Figma (prototype), HTML, CSS and JS</p>
+    <footer class="footer-dft win-background">
+        <section class="left-sct">
+            <p class="prg-dft">Anderson Queiroz - 2022</p>
+            <p class="prg-made">Site made with Figma (prototype), HTML, CSS and JS</p>
+        </section>
+        <section class="right-sct">
+            <button class="btn-mode btn-color select">
+                <span class="material-symbols-outlined">light_mode</span>
+            </button>
+        </section>
     </footer>
 
     <!--  Tag to call .js -->

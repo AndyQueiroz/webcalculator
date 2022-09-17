@@ -26,5 +26,5 @@ function dividir() {
 function limpar() {
     firstInput.value = null;
     secondInput.value = null;
-    resultOutput.value = '0';
+    resultOutput.value = ' '; // Caractere ALT + 255 = Espaço
 }
