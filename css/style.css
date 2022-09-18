@@ -15,6 +15,42 @@ font-family: 'Exo 2', sans-serif;       *400 (regular) *700 (bold)
     box-sizing: border-box;
     text-decoration: none;
 }
+body {
+    /* VARIÁVEIS CSS ----- */
+    --color-background: linear-gradient(to right,#02AAB0,#00CDAC);
+    --color-window-background: #09857D3F;
+    --color-font: #F1F1F1;
+
+    --color-input: #66E5DE;
+    --color-input-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.5);
+    --color-input-select: #77F6EF;
+    --color-input-font: #444444;
+
+    --color-button: #09857D;
+    --color-button-select: #10968E;
+    --btn-select-lightmode: inset 4px 4px 4px rgba(0, 0, 0, 0.5);
+    --btn-select-darkmode: none;
+    /* ------------------- */
+
+    margin-top: 155px;
+    font-size: 100%;
+    background: var(--color-background);
+}
+.darkmode {
+    /* VARIÁVEIS CSS ----- */
+    --color-background: #000000;
+    --color-window-background: #181818;
+
+    --color-input: #232222;
+    --color-input-select: #343333;
+    --color-input-font: #F1F1F1;
+
+    --color-button: #444444;
+    --color-button-select: #555555;
+
+    --btn-select-darkmode: inset 4px 4px 4px rgba(0, 0, 0, 0.5);
+    --btn-select-lightmode: none;
+}
 
 /* SETTINGS FOR MOBILE ############### */
 @media (pointer: coarse) {
@@ -73,7 +109,6 @@ font-family: 'Exo 2', sans-serif;       *400 (regular) *700 (bold)
         font-family: 'Exo 2', sans-serif    !important;
         font-weight: 700                    !important;
         font-size: 22px                     !important;
-        color: #F1F1F1                    !important;
         margin-bottom: 5px                  !important;
         text-align: center                  !important;
     }
@@ -95,7 +130,6 @@ font-family: 'Exo 2', sans-serif;       *400 (regular) *700 (bold)
         height: 150px !important;
     }
     .output-dft {
-        word-wrap: break-word !important;
         font-size: 24px !important;
         width: 155px !important;
         height: 95.5px !important;
@@ -124,39 +158,32 @@ font-family: 'Exo 2', sans-serif;       *400 (regular) *700 (bold)
 /* ################################### */
 
 /* GLOBAL STYLES ##################### */
-body {
-    margin-top: 155px;
-    font-size: 100%; /*DEFAULT: 100%*/
-    background: linear-gradient(to right,#02AAB0,#00CDAC);
-}
-.clear {
-    clear: both;
-}
-.win-background {
-    background: #09857D3F;
-}
-.select:hover {
-    box-shadow: 1px 1px 4px 0px rgba(197, 197, 197, 0.75);
-}
 .prg-dft {
     font-family: 'Exo 2', sans-serif;
     font-weight: 700;                   /*    DEFAULT: 700        */
     font-size: 16px;                    /*    DEFAULT: 16px       */
-    color: #F1F1F1;                   /*    DEFAULT: #F1F1F1    */
+    color: var(--color-font);                  /*    DEFAULT: #F1F1F1    */
     margin-bottom: 5px;
     text-align: center;
 }
-.spacing {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+
+.box-font {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 400;                   /*    DEFAULT: 700        */
+    font-size: 16px;                    /*    DEFAULT: 16px       */
+    color: var(--color-font);                  /*    DEFAULT: #F1F1F1    */
+    text-align: center;
 }
-.box {
+.box-color {
     border: none;
-    background: #66E5DE;
-    box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.5);
-    color: #444444;
+    background: var(--color-input);
+    box-shadow: var(--color-input-shadow);
+    color: var(--color-input-font);
 }
+.box-color:hover {
+    background: var(--color-input-select);
+}
+
 .btn-dft {
     margin-bottom: 15px;
     width: 117.5px;
@@ -165,8 +192,16 @@ body {
 .btn-color {
     border: none;
     border-radius: 4px;
-    background: #09857D;
-    color: #f1f1f1;
+    background: var(--color-button);
+    color: var(--color-font);
+}
+.btn-color:hover {
+    background: var(--color-button-select);
+}
+.spacing {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 /* ---------------------------- */
 .btn-somar::after {
@@ -189,13 +224,14 @@ body {
     width: 600px;
     height: 100px;
     padding-bottom: 15px;
+    background: var(--color-window-background);
 }
 .title-dft {
     font-family: 'Righteous', cursive;
     font-style: normal;
-    font-weight: 400;                   /*    DEFAULT: 400        */
-    font-size: 36px;                    /*    DEFAULT: 36px       */
-    color: #F1F1F1;                   /*    DEFAULT: #F1F1F1    */
+    font-weight: 400;
+    font-size: 36px;
+    color: var(--color-font);
     text-align: center;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -207,6 +243,7 @@ body {
     margin: 0 auto;
     width: 600px;
     height: 250px;
+    background: var(--color-window-background);
 }
 .upper-sct {
     display: flex;
@@ -238,7 +275,7 @@ body {
     font-family: 'Exo 2', sans-serif;
     font-weight: 400;
     font-size: 16px;
-    color: #F1F1F1;
+    color: var(--color-font);
     margin-bottom: 5px;
     text-align: center;
 }
@@ -253,12 +290,12 @@ body {
     align-items: flex-start;
 }
 .output-dft {
-    text-align: center;
+    word-wrap: break-word;
     font-size: 24px;
     margin-bottom: 5px; 
-    padding: 4px;
-    width: 275px;
-    height: 30px;
+    padding: 2px;
+    width: 250px;
+    height: 60px;
 }
 /* ################################### */
 
@@ -272,6 +309,7 @@ body {
     height: 105px;
     padding-top: 30px;
     padding-bottom: 15px;
+    background: var(--color-window-background);
 }
 .left-sct {
     padding: none;
@@ -283,22 +321,33 @@ body {
 }
 .prg-made {
     font-family: 'Exo 2', sans-serif;
-    font-weight: 400;                   /*    DEFAULT: 400        */
-    font-size: 16px;                    /*    DEFAULT: 16px       */
-    color: #F1F1F1;                   /*    DEFAULT: #F1F1F1    */
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--color-font);
     text-align: center;
 }
 .right-sct {
-    align-items: center;
+    display: flex;
     padding-right: 20px;
+    justify-content: center;
 }
+
 .btn-mode {
+    border-radius: 0px !important;
     margin-bottom: 15px;
-    width: 75px;
+    width: 30px;
     height: 50px;
+}
+.light-mode {
+    box-shadow: var(--btn-select-lightmode);
+}
+.dark-mode {
+    box-shadow: var(--btn-select-darkmode);
 }
 span {
     margin-top: 4px;
+    width: 32px;
+    height: 25px;
 }
 .material-symbols-outlined {
     font-variation-settings:
