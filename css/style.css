@@ -160,18 +160,18 @@ body {
 /* GLOBAL STYLES ##################### */
 .prg-dft {
     font-family: 'Exo 2', sans-serif;
-    font-weight: 700;                   /*    DEFAULT: 700        */
-    font-size: 16px;                    /*    DEFAULT: 16px       */
-    color: var(--color-font);                  /*    DEFAULT: #F1F1F1    */
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--color-font);
     margin-bottom: 5px;
     text-align: center;
 }
 
 .box-font {
     font-family: 'Exo 2', sans-serif;
-    font-weight: 400;                   /*    DEFAULT: 700        */
-    font-size: 16px;                    /*    DEFAULT: 16px       */
-    color: var(--color-font);                  /*    DEFAULT: #F1F1F1    */
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--color-font);
     text-align: center;
 }
 .box-color {
